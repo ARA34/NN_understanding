@@ -7,13 +7,13 @@ nnfs.init()
 
 inputs = [0,2,-1,3.3,-2.7,1.1,2.2,-100]
 
-X = [
-    [0.2,0.8,-0.5,1.0],
-    [0.5,-0.91,0.26,-0.5],
-    [-0.26,-0.27,0.17,0.87]
-    ]
+#X = [
+ #   [0.2,0.8,-0.5,1.0],
+  #  [0.5,-0.91,0.26,-0.5],
+   # [-0.26,-0.27,0.17,0.87]
+    #]
 
-x,y = spiral_data(100,3)
+X,y = spiral_data(100,3)
 
 
 
@@ -30,10 +30,11 @@ class Activation_ReLU:
 
 # Inputs are two because data from x and data from y
 layer1 = Layer_Dense(2,5) # inputs, neurons
-activation = Activation_ReLU()
+activation1 = Activation_ReLU()
 layer1.forward(X)
-print(layer1.output)
-#activation1.forward(layer1.output)
+#print(layer1.output)
+activation1.forward(layer1.output)
+print(activation1.output)
 
 
 
